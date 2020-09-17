@@ -89,7 +89,7 @@ class LinkedList:
             self.tail = None
             return val
         # otherwise, the linked list has more than one node
-        else: 
+        else:
         # store the last Node's value in another variable so we can return it
             val = self.tail.get_value()
         # we need to set 'self.tail' to the second to last Node
