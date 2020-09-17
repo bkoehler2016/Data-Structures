@@ -74,24 +74,6 @@ class LinkedList:
 
         return value
 
-    #     # Removing from the Head
-    # def remove_head(self):
-    #     # check if the linked list is empty
-    #     if self.head is None and self.tail is None:
-    #         return None
-    #     # check if there is only one linked list node
-    #     if self.head == self.tail:
-    #         val = self.head.get_value()
-    #         self.head = None
-    #         self.tail = None
-
-    #     else:
-    #     # store the old heads value that we need to return
-    #         val = self.head.get_value()
-    #     # set 'self.head' to the old head's next node
-    #     self.head = self.head.get_next()
-    #     # return the old_heads value
-    #     return val
 
     def remove_tail(self):
         # check if the linked list is empty
