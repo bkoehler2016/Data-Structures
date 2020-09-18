@@ -99,7 +99,7 @@ class LinkedList:
         # init another reference to keep track of where we are in the linked list as were iterating
         current = self.head
         # keep iterating until the node after 'current' is tail
-        while current.get_next() != self.tail:
+        while current.get_next() is not self.tail:
 
             # keep iterating
             # set current to its own next
