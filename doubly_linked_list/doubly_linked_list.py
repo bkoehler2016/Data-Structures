@@ -9,8 +9,10 @@ class ListNode:
         self.next = next
 
     def delete(self):
-        self.head = None
-        self.tail = None
+        if self.prev:
+            self.prev.next = self.next
+        if self.next:
+            self.next.prev = self.prev
 
 """
 Our doubly-linked list class. It holds references to
@@ -109,24 +111,25 @@ class DoublyLinkedList:
     order of the other elements of the List.
     """
     def delete(self, node):
-        # don't need to return value
-
-        #DO need to Update head, tail
-        if self.head is None:
-            return None
-        elif self.head is self.tail:
-            self.head = None
-            self.tail = None
-        elif node is self.head: # list has +2 nodes
-            self.head = node.next
-            node.delete() # updating prev and/or next pointers
-        elif node is self.tail:
-            self.tail = node.prev
-            node.delete()
-        else:
-            node.delete()
+        if not self.head and not self.tail:
+            return
 
         self.length -= 1
+
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+        
+        elif self.head == node:
+            self.head = node.next
+            node.delete()
+
+        elif self.tail == node:
+            self.tail = node.prev
+            node.delete()
+        
+        else:
+            node.delete()
 
 
 
