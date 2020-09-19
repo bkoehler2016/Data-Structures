@@ -113,7 +113,6 @@ class DoublyLinkedList:
     def delete(self, node):
         if not self.head and not self.tail:
             return
-
         self.length -= 1
 
         if self.head is self.tail:
