@@ -111,14 +111,15 @@ class DoublyLinkedList:
     order of the other elements of the List.
     """
     def delete(self, node):
-        if not self.head and not self.tail:
+        #empty DLL
+        if not self.head and not self.tail: 
             return
         self.length -= 1
-
+        # DLL with only one node
         if self.head is self.tail:
             self.head = None
             self.tail = None
-        
+        # more than one
         elif self.head is node:
             self.head = node.next
             node.delete()
@@ -126,7 +127,7 @@ class DoublyLinkedList:
         elif self.tail is node:
             self.tail = node.prev
             node.delete()
-        
+        #exit if nothing else meets
         else:
             node.delete()
 
