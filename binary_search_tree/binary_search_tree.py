@@ -142,18 +142,28 @@ class BSTNode:
 
     # Print Post-order recursive DFT
     def post_order_dft(self, node):
-        stack = Stack()
-        stack.push(node)
+        if self is None:
+            return
+        s1 = []
+        s2 = []
         
-        while stack.size is not 0:
-            node = stack.pop()
+        s1.append(self)
+        
+        while s1:
+            node = s1.pop()
+            s2.append(node)
             
             if node.left:
-                stack.push(node.left)
+                s1.append(node.left)
                 
             if node.right:
-                stack.push(node.right)
-                print(node.value)
+                s1.append(node.right)
+                
+        while s2:
+            node = s2.pop()
+            print(node.value)
+        
+        
                 
                 
 
