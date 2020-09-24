@@ -141,8 +141,21 @@ class BSTNode:
                 
 
     # Print Post-order recursive DFT
-    def post_order_dft(self):
-        pass
+    def post_order_dft(self, node):
+        stack = Stack()
+        stack.push(node)
+        
+        while stack.size is not 0:
+            node = stack.pop()
+            
+            if node.left:
+                stack.push(node.left)
+                
+            if node.right:
+                stack.push(node.right)
+                print(node.value)
+                
+                
 
 """
 This code is necessary for testing the `print` methods
@@ -167,5 +180,5 @@ print("pre order")
 bst.pre_order_dft(bst)
 print("in order")
 bst.in_order_print(bst)
-# print("post order")
-# bst.post_order_dft()
+print("post order")
+bst.post_order_dft(bst)
