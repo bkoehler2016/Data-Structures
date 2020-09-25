@@ -186,9 +186,12 @@ print("DFT")
 bst.dft_print(bst)
 
 print("elegant methods")
-print("pre order")
-bst.pre_order_dft(bst)
+
 print("in order")
 bst.in_order_print(bst)
+
+print("pre order")
+bst.pre_order_dft(bst)
+
 print("post order")
 bst.post_order_dft(bst)
