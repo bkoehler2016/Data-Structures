@@ -157,16 +157,15 @@ class BSTNode:
             # append it to s2 
             node = s1.pop()
             s2.append(node)
-           
+            
             # Push left and right children of  
-            # removed item to s1 
+            # removed item to s1
             if node.left:
                 s1.append(node.left)
                 
             if node.right:
                 s1.append(node.right)
-        
-        # Print all elements of second stack        
+                
         while s2:
             node = s2.pop()
             print(node.value)
