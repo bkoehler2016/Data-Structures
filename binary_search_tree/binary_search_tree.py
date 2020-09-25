@@ -130,7 +130,7 @@ class BSTNode:
     def pre_order_dft(self,node):
         stack = Stack()
         stack.push(node)
-        while stack.size is not 0:
+        while stack.size != 0:
             node = stack.pop()
             print(node.value)
             if node.right:
