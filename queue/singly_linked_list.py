@@ -89,7 +89,7 @@ class LinkedList:
             self.tail = None
             return val
         # otherwise, the linked list has more than one node
-        else: 
+        else:
         # store the last Node's value in another variable so we can return it
             val = self.tail.get_value()
         # we need to set 'self.tail' to the second to last Node
@@ -99,7 +99,7 @@ class LinkedList:
         # init another reference to keep track of where we are in the linked list as were iterating
         current = self.head
         # keep iterating until the node after 'current' is tail
-        while current.get_next() is not self.tail:
+        while current.get_next() != self.tail:
 
             # keep iterating
             # set current to its own next
